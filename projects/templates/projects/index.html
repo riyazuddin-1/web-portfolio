@@ -1,0 +1,23 @@
+
+    <fieldset class="h-100 p-2 overflow-auto" style="min-width: 400px;">
+        <legend>Projects</legend>
+        <div class="p-2">
+            {% for x in myprojects %}
+                <h4><a href="javascript:showProject('{{ x.id }}')">{{ x.title }}</a></h4>
+                <p class="slim-text project-subscript" style="font-size: 12px;">{{ x.mention }}</p>
+                <hr/>
+            {% endfor %}
+        </div>
+    </fieldset>
+    <div class="project-details"></div>
+
+    <script>
+      function showProject(project) {
+        fetch('/project/'+project)
+        .then(response => response.text())
+        .then(data => {
+            $('.project-details').html(data);
+        })
+        .catch(error => console.error(error));
+      }
+    </script>

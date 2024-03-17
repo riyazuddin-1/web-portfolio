@@ -1,0 +1,9 @@
+{% load static %}
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+{% with script as src %}
+<script src="{% static src %}"></script>
+{% endwith %}
+</html>

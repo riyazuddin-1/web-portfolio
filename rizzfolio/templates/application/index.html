@@ -1,0 +1,31 @@
+{% include 'header.html' with title="Hii!!" stylesheet="css/style.css" %}
+
+    <div class="rizzfolio">
+        {% include 'application/navbar.html' %}
+        <div class="main-container mx-auto my-4 p-2 justify-content-center">
+            <div class="content w-100 overflow-auto" id="content">
+                {% include 'about/index.html' %}
+            </div>
+            <div class="actions d-flex flex-custom m-4 justify-content-center">
+                <p class="partition flex-custom m-auto"><span>|</span><span>|</span><span>|</span></p>
+                <button id="home" data-template="home" class="render-tpl btn rounded bg-white active m-1" title="Home" type="button">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+                <button id="about" data-template="about" class="render-tpl btn rounded bg-white m-1" title="About me" type="button">
+                    <i class="fa-regular fa-address-card"></i>
+                </button>
+                <button id="contact" data-template="contact" class="render-tpl btn rounded bg-white m-1" title="Contact" type="button">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                </button>
+                <button id="get-in-touch" class="btn rounded text-light m-1 border border-light" title="to be developed" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+                <p class="partition flex-custom m-auto"><span>|</span><span>|</span><span>|</span></p>
+            </div>
+    
+            <div class="projects">    
+            </div>
+        </div>
+    </div>
+
+{% include 'footer.html' with script="scripts/script.js" %}

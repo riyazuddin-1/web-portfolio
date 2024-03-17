@@ -1,0 +1,26 @@
+<div class="d-flex flex-column h-100 justify-content-center p-4">
+    <div class="d-flex flex-column contact-links p-4">
+        <h3 class="slim-text">Links</h3>
+        <a href="https://www.linkedin.com/in/mohammed-riyazuddin01/" target="_blank" class="w-fc" rel="noopener noreferrer">Linkedin<sup>↗️</sup></a>
+        <a href="https://github.com/riyazuddin-1" target="_blank" class="w-fc" rel="noopener noreferrer">Github<sup>↗️</sup></a>
+        <a href="https://turu.vercel.app/riyaz-resume" target="_blank" class="w-fc" rel="noopener noreferrer">Resume<sup>↗️</sup></a>
+    </div>
+    <div class="connect p-4">
+        <h3 class="slim-text">Connect</h3>
+        <p class="w-fc bg-black">
+            <i class="fa-solid fa-envelope ms-2"></i>
+            <span class="mx-2"><a href="mailto:md.riyazuddin.dev@gmail.com">md.riyazuddin.dev@gmail.com</a></span>
+            <button class="copy-id btn bg-white" data-connect="md.riyazuddin.dev@gmail.com"><i class="fa-regular fa-copy"></i></button>
+        </p>
+    </div>
+</div>
+
+<script>
+    $('.copy-id').click(function () {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(this).data("connect")).select();
+    document.execCommand("copy");
+    $temp.remove();
+})
+</script>

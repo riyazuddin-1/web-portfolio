@@ -1,0 +1,128 @@
+
+:root {
+    --anchor: rgb(179, 241, 179);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: grey;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  color: var(--anchor);
+}
+
+a:hover {
+  color: var(--anchor);
+  text-decoration: underline;
+}
+
+/* Custom CSS */
+#nav-title {
+  width: 125px;
+}
+
+.active {
+  background-color: var(--anchor) !important;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.w-fc {
+  width: fit-content;
+}
+
+.greetings {
+  font-size: 70px;
+}
+
+.my-info-home > p {
+  font-size: 18px;
+}
+
+.contact-links > a {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.flex-custom {
+  flex-direction: column;
+}
+
+.partition {
+  display: flex;
+}
+
+.project-subscript {
+  float: right;
+  position: relative;
+  bottom: 10px;
+}
+
+.rizzfolio {
+  width: 1280px;
+}
+
+.rizzfolio > .main-container {
+  display: flex;
+  flex-direction: row;
+  max-height: 600px;
+}
+
+/* Fonts */
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+}
+
+.slim-text {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Standard */
+fieldset {
+  margin-bottom: 1em !important;
+  border: 2px solid #666 !important;
+  padding:1px !important;
+}
+
+legend {
+    padding: 1px 10px !important;
+    float:none;
+    width:auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .rizzfolio > .main-container {
+    display: grid;
+    min-height: 100%;
+  }
+  .content {
+    height: 80vh;
+  }
+  .actions {
+    margin: 0;
+    margin-top: auto;
+  }
+  .flex-custom {
+    flex-direction: row;
+  }
+  .partition {
+    display: none;
+  }
+}

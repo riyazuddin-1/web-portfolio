@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+
+{% block modal-title %}
+{{ myproject.title }}
+{% endblock %}
+
+{% block modal-body %}
+    <p id="project-description">{{ myproject.description | safe }}</p>
+    <p><b>Tech used: </b>{{ myproject.techused }}</p>
+    <p>{{ myproject.additional_description }}</p>
+{% endblock %}
+
+{% block modal-footer %}
+    <div class="links w-100 d-flex justify-content-around">
+        {% for link in links %}
+            <a href="{{ link.link }}" target="blank">{{ link.text }}<sup>↗️</sup></a>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        var myModal = new bootstrap.Modal(document.getElementById("project-details-modal"));
+        myModal.show();
+    </script>
+{% endblock %}
